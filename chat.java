@@ -134,7 +134,11 @@ public class chat {
 	 */
 	private static void callUsage(int exitStatus) {
 		
-		String useage = "";
+		String useage = "\'a\' - designates Alice's private key (if first) or public key\n"
+        		+ "\'b\' - designates Bob's public key (if first ) or private key\n"
+        		+ "\'p\' - designates port number\n"
+        		+ "\'i\' - designates IP address\n"
+        		+ "\'h\' - lists cammand line options for this program\n";
 		
 		System.err.println(useage);
 		System.exit(exitStatus);
