@@ -67,6 +67,8 @@ public class chat {
 		ChatListenter chatListener = new ChatListenter();
 		chatListener.start();
 		
+		System.out.print("");
+		
 //		loop through sending and receiving messages
 		PrintStream output = null;
 		try {
@@ -299,7 +301,10 @@ public class chat {
 					if(inputStr != null){
 						message += inputStr+"\n";
 						if(inputStr.equals("")){
-							System.out.print(DES_C.decrypt(hex, message));
+							
+							System.out.print(message + "    " + DES_C.decrypt(hex, message));
+							//               ^^^^REMOVE <message> and <"     "> WHEN DONE
+							
 							message = "";
 							inputStr = "";
 						}

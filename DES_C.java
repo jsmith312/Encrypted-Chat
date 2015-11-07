@@ -37,6 +37,7 @@ public class DES_C {
 	public static String key;
 	
 	public static String decrypt(String keyHex, String m) {
+		new_message = "";
 		K_BITSET = hexToBinary(keyHex, 64);
 		String[] lines = m.split("\n");
 		String line = "";
@@ -89,6 +90,7 @@ public class DES_C {
 	 * Prepend 64 bit IV
 	 */
 	public static String encrypt(String keyHex, String m) {
+		new_message = "";
 		K_BITSET = hexToBinary(keyHex, 64);
 		message = m;
 		key = keyHex;
