@@ -1,0 +1,41 @@
+Terminal 1:
+
+./RSA.sh -k
+
+//Take the keys and plug into next part
+
+javac -cp "gnu.getopt.jar:." chat.java -c
+javac -cp "gnu.getopt.jar:." DES_C.java -c
+javac -cp "gnu.getopt.jar:." RSA_C.java -c
+
+java -cp "gnu.getopt.jar:." chat --alice -a <Alice private key (e)> 
+								 -m <Alice modulus (n)> 
+								 -b <Bob public (d from other terminal)> 
+								 -n <bob mod (n) from other terminal>
+								 -p port number
+								 -i localhost
+
+//wait for otehr client to do the same
+
+Terminal 2:
+
+./RSA.sh -k
+//Take the keys and plug into next part
+
+java -cp "gnu.getopt.jar:." chat --bob -b <Bob private key (e)> 
+								 -n <Bob modulus (n)> 
+								 -a <ALice public (d from other terminal)> 
+								 -m <alice mod (n) from other terminal>
+								 -p port number
+								 -i localhost
+								 
+//wait
+
+Terminal 1:
+//Type anything to start handshake.
+//"Chat is now encrypted." shuld appear on both terminals
+
+//The first message sent will be encrypted and decrypted properly. The next 
+//  one will show obvious flaws because the variable holding the last messsage is not cleared. 
+//  This variable might be in char.java or DES_C.java.
+//If you remove the DES_C.encrypt... and ...decrypt... from chat.java then the chat will function normally without encryption.
