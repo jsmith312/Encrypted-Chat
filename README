@@ -1,3 +1,46 @@
+EXAMPLE:
+Terminal 1:
+
+There is no other client on this IP:port pairing, waiting for them to join.
+Client Connected.
+Welcome to (soon to be) encrypted chat program.
+Press enter/return.
+
+Chat is now encrypted.
+Hello 
+d3479f578e6b8fa1					<<< These lines are the encrypted text of the other user's message prior to being decrypted.
+16a98ef008d568d6					<<< Remove this option from line 310 in chat.java   <message + "    ">
+ab3f65115b1b73f8
+
+    bob: Hey
+    
+    
+Terminal 2:
+
+Client Connected.
+Welcome to (soon to be) encrypted chat program.
+Please wait...
+Chat is now encrypted.
+0f662e4bc0e3d967
+cfe0cb08e29c2e10
+2b556a1a107286a9
+
+    alice: Hello
+Hey
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Terminal 1:
 
 ./RSA.sh -k

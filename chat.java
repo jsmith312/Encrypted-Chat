@@ -62,6 +62,11 @@ public class chat {
 
         // Set up username
 		System.out.println("Welcome to (soon to be) encrypted chat program.");
+		if(rec){
+			System.out.println("Press enter/return.");
+		}else{
+			System.out.println("Please wait...");
+		}
 
 //		Make thread to print out incoming messages...
 		ChatListenter chatListener = new ChatListenter();
