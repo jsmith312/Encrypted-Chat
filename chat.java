@@ -113,7 +113,7 @@ public class chat {
 				System.out.println("Chat is now encrypted.");
 			}		
 			input = keyboard.nextLine();
-			input = username + ": " + input;
+			input = input;
 			
 		//Send to other user				
 			if(set){
@@ -271,7 +271,7 @@ public class chat {
 			while(true) {
 				try {
 //					Read lines off the scanner				
-					
+					System.out.print("");
 					if(rec){
 						rec = false;
 						inputStr = input.readLine();
@@ -296,18 +296,18 @@ public class chat {
 									
 				if(set){	
 					inputStr = input.readLine();
-					int n;
+					String n;
 					if(username.equals("alice")){
-						n = 3;
+						n = "bob";
 					}else{
-						n = 5;
+						n = "alice";
 					}
 					
 					if(inputStr != null){
 						message += inputStr+"\n";
 						if(inputStr.equals("")){
 							
-							System.out.print(message + "    " + DES_C.decrypt(hex, message));
+							System.out.print(message +"\n"+n+": "+DES_C.decrypt(hex, message));
 							//               ^^^^REMOVE <message> and <"     "> WHEN DONE
 							
 							message = "";
