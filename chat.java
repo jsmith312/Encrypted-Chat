@@ -170,7 +170,7 @@ public class chat {
 		LongOpt[] longopts = new LongOpt[2];
 		longopts[0] = new LongOpt("alice", LongOpt.NO_ARGUMENT, null, 1);
 		longopts[1] = new LongOpt("bob", LongOpt.NO_ARGUMENT, null, 2);
-		Getopt g = new Getopt("Chat Program", args, "a:b:m:n:p:i:", longopts);
+		Getopt g = new Getopt("Chat Program", args, "a:b:m:n:p:i:h:", longopts);
 		int c;
 		String arg;
 		while ((c = g.getopt()) != -1){
